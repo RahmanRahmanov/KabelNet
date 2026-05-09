@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-label="Карта зоны обслуживания">
+  <defs>
+    <linearGradient id="mapBg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#eef7f5"/>
+      <stop offset="1" stop-color="#f8f3e8"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="520" rx="28" fill="url(#mapBg)"/>
+  <g fill="none" stroke="#c9d8d4" stroke-width="18" stroke-linecap="round">
+    <path d="M40 130c140-36 240 50 374 26 137-25 258-106 446-56"/>
+    <path d="M35 330c138-72 260-28 398-16 151 13 269-82 430-48"/>
+    <path d="M194 40c40 114 37 231 8 356"/>
+    <path d="M520 34c-29 126-8 254 18 386"/>
+    <path d="M733 74c-82 98-102 209-68 340"/>
+  </g>
+  <g fill="#ffffff" stroke="#2f7d75" stroke-width="4">
+    <circle cx="258" cy="166" r="22"/>
+    <circle cx="572" cy="285" r="22"/>
+    <circle cx="718" cy="140" r="22"/>
+  </g>
+  <path d="M572 285c0-52 42-94 94-94s94 42 94 94" fill="none" stroke="#d59b4a" stroke-width="10" stroke-linecap="round" opacity=".75"/>
+  <rect x="58" y="390" width="300" height="72" rx="18" fill="#ffffff"/>
+  <rect x="86" y="415" width="126" height="14" rx="7" fill="#2f7d75"/>
+  <rect x="86" y="440" width="220" height="12" rx="6" fill="#8fbdb7"/>
+</svg>

@@ -1,0 +1,248 @@
+/* Tablet layout */
+@media (max-width: 1024px) {
+  :root {
+    --header-height: 70px;
+  }
+
+  .site-nav {
+    position: fixed;
+    top: var(--header-height);
+    left: 16px;
+    right: 16px;
+    display: grid;
+    gap: 6px;
+    padding: 14px;
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-soft);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity var(--transition), visibility var(--transition), transform var(--transition);
+  }
+
+  .site-nav.is-open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .site-nav__link {
+    width: 100%;
+  }
+
+  .burger {
+    display: inline-block;
+  }
+
+  .hero {
+    min-height: 620px;
+    background-position: 58% center;
+  }
+
+  h1 {
+    font-size: 2.65rem;
+  }
+
+  h2 {
+    font-size: 1.9rem;
+  }
+
+  .feature-grid,
+  .stats-band__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tariff-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .split,
+  .auth-layout,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-card {
+    position: static;
+  }
+
+  .contact-aside {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Mobile layout */
+@media (max-width: 760px) {
+  .container {
+    width: min(100% - 24px, var(--container));
+  }
+
+  .brand__text {
+    font-size: 1.05rem;
+  }
+
+  .theme-toggle__text {
+    display: none;
+  }
+
+  .theme-toggle {
+    width: 44px;
+    justify-content: center;
+    padding: 8px;
+  }
+
+  .hero {
+    min-height: auto;
+    background-image:
+      linear-gradient(180deg, rgba(246, 248, 246, 0.98) 0%, rgba(246, 248, 246, 0.92) 62%, rgba(246, 248, 246, 0.72) 100%),
+      url("../images/hero-network.svg");
+    background-position: 62% center;
+  }
+
+  body.dark-theme .hero {
+    background-image:
+      linear-gradient(180deg, rgba(16, 24, 22, 0.98) 0%, rgba(16, 24, 22, 0.9) 65%, rgba(16, 24, 22, 0.72) 100%),
+      url("../images/hero-network.svg");
+  }
+
+  .hero__content {
+    padding: 70px 0 48px;
+  }
+
+  h1,
+  .page-hero h1 {
+    font-size: 2.15rem;
+  }
+
+  h2 {
+    font-size: 1.65rem;
+  }
+
+  .hero__lead,
+  .page-hero p:last-child {
+    font-size: 1rem;
+  }
+
+  .hero__actions {
+    display: grid;
+  }
+
+  .hero__facts {
+    grid-template-columns: 1fr;
+    margin-top: 32px;
+  }
+
+  .hero__facts div {
+    min-height: auto;
+  }
+
+  .section {
+    padding: 62px 0;
+  }
+
+  .page-hero {
+    padding: 58px 0 46px;
+  }
+
+  .feature-grid,
+  .tariff-grid,
+  .stats-band__grid,
+  .contact-aside,
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-card,
+  .tariff-card {
+    min-height: auto;
+  }
+
+  .stats-band {
+    padding: 38px 0;
+  }
+
+  .dashboard__top,
+  .requests-panel__head,
+  .support-strip {
+    display: grid;
+  }
+
+  .support-strip {
+    padding: 26px;
+  }
+
+  .request-item {
+    grid-template-columns: 1fr;
+  }
+
+  .delete-request {
+    justify-self: start;
+  }
+
+  .footer__grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 36px 0;
+  }
+
+  .toast-container {
+    right: 12px;
+    bottom: 76px;
+    width: calc(100% - 24px);
+  }
+}
+
+/* Small mobile refinements */
+@media (max-width: 480px) {
+  .header__inner {
+    gap: 10px;
+  }
+
+  .brand__logo {
+    width: 38px;
+    height: 38px;
+  }
+
+  .hero__content {
+    padding-top: 54px;
+  }
+
+  h1,
+  .page-hero h1 {
+    font-size: 1.85rem;
+  }
+
+  .tariff-card,
+  .info-panel,
+  .auth-card,
+  .profile-card,
+  .request-form,
+  .requests-panel,
+  .contact-form,
+  .modal__content {
+    padding: 22px;
+  }
+
+  .modal {
+    padding: 12px;
+  }
+
+  .toolbar {
+    display: grid;
+  }
+
+  .filter-btn {
+    width: 100%;
+  }
+
+  .back-to-top {
+    right: 14px;
+    bottom: 14px;
+  }
+}

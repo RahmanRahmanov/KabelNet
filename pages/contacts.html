@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Контакты и поддержка KabelNet">
+  <title>Контакты и поддержка — KabelNet</title>
+  <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body data-page="contacts">
+  <div class="preloader" data-preloader>
+    <div class="preloader__ring"></div>
+    <p>Загрузка поддержки</p>
+  </div>
+
+  <header class="site-header" data-header>
+    <div class="container header__inner">
+      <a class="brand" href="../index.html" aria-label="KabelNet на главную">
+        <img src="../images/favicon.svg" alt="" class="brand__logo">
+        <span class="brand__text">KabelNet</span>
+      </a>
+      <nav class="site-nav" id="mainNav" aria-label="Основная навигация">
+        <a href="../index.html" class="site-nav__link">Главная</a>
+        <a href="services.html" class="site-nav__link">Услуги</a>
+        <a href="dashboard.html" class="site-nav__link">Личный кабинет</a>
+        <a href="contacts.html" class="site-nav__link is-active" aria-current="page">Контакты</a>
+      </nav>
+      <div class="header__actions">
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Переключить тему">
+          <span class="theme-toggle__icon" aria-hidden="true"></span>
+          <span class="theme-toggle__text">Тема</span>
+        </button>
+        <button class="burger" type="button" data-burger aria-label="Открыть меню" aria-controls="mainNav" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Контакты и поддержка</p>
+        <h1>Свяжитесь с нами по вопросам подключения и обслуживания</h1>
+        <p>Отправьте сообщение через форму, проверьте адрес офиса или выберите удобный канал связи.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-grid">
+        <div>
+          <div class="section-header section-header--left">
+            <p class="eyebrow">Обратная связь</p>
+            <h2>Форма обращения</h2>
+            <p>Форма проверяет заполнение полей через JavaScript и показывает уведомление об успешной отправке.</p>
+          </div>
+          <form class="form contact-form" id="contactForm" novalidate>
+            <div class="form-grid">
+              <label class="field">
+                <span>Имя</span>
+                <input type="text" name="name" placeholder="Введите имя" required>
+                <small class="field__error"></small>
+              </label>
+              <label class="field">
+                <span>Email</span>
+                <input type="email" name="email" placeholder="name@example.com" required>
+                <small class="field__error"></small>
+              </label>
+            </div>
+            <label class="field">
+              <span>Тема</span>
+              <select name="subject" required>
+                <option value="">Выберите тему</option>
+                <option value="Подключение">Подключение</option>
+                <option value="Техническая проблема">Техническая проблема</option>
+                <option value="Оплата">Оплата</option>
+                <option value="Изменение тарифа">Изменение тарифа</option>
+              </select>
+              <small class="field__error"></small>
+            </label>
+            <label class="field">
+              <span>Сообщение</span>
+              <textarea name="message" rows="5" placeholder="Опишите вопрос" required></textarea>
+              <small class="field__error"></small>
+            </label>
+            <button class="btn btn--primary" type="submit">Отправить сообщение</button>
+          </form>
+        </div>
+
+        <aside class="contact-aside">
+          <article class="contact-card">
+            <img src="../images/icon-map.svg" alt="" class="contact-card__icon">
+            <h3>Офис обслуживания</h3>
+            <p>Баку, ул. Цифровая, 24</p>
+            <span>Пн–Сб: 09:00–19:00</span>
+          </article>
+          <article class="contact-card">
+            <img src="../images/icon-support.svg" alt="" class="contact-card__icon">
+            <h3>Техническая поддержка</h3>
+            <p>+994 12 555 44 33</p>
+            <span>Прием обращений: 24/7</span>
+          </article>
+          <article class="contact-card">
+            <img src="../images/icon-card.svg" alt="" class="contact-card__icon">
+            <h3>Абонентский отдел</h3>
+            <p>billing@kabelnet.local</p>
+            <span>Вопросы оплаты и договоров</span>
+          </article>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section--muted">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">Зона обслуживания</p>
+          <h2>Карта подключения</h2>
+        </div>
+        <div class="map-card">
+          <img src="../images/map-placeholder.svg" alt="Карта зоны обслуживания KabelNet">
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container support-strip">
+        <div>
+          <p class="eyebrow">Экстренная поддержка</p>
+          <h2>Нет сигнала или пропал интернет?</h2>
+          <p>Создайте заявку в кабинете или напишите через форму. Для демонстрации сайта все обращения обрабатываются на стороне браузера.</p>
+        </div>
+        <a class="btn btn--secondary" href="dashboard.html">Перейти в кабинет</a>
+      </div>
+    </section>
+
+    <section class="section section--compact">
+      <div class="container narrow">
+        <div class="section-header">
+          <p class="eyebrow">FAQ</p>
+          <h2>Вопросы поддержки</h2>
+        </div>
+        <div class="faq" data-accordion>
+          <div class="faq__item">
+            <button class="faq__question" type="button">Что делать, если телевидение не показывает?</button>
+            <div class="faq__answer">
+              <p>Проверьте кабель, питание приставки и выбранный источник сигнала на телевизоре. Если проблема остается, создайте заявку в кабинете.</p>
+            </div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__question" type="button">Как узнать статус обращения?</button>
+            <div class="faq__answer">
+              <p>В демонстрационной версии статус отображается в списке заявок личного кабинета и сохраняется в LocalStorage.</p>
+            </div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__question" type="button">Можно ли отправить сообщение без регистрации?</button>
+            <div class="faq__answer">
+              <p>Да, контактная форма доступна всем посетителям сайта и не требует входа в личный кабинет.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal" id="connectionModal" aria-hidden="true" role="dialog" aria-labelledby="connectionTitle">
+    <div class="modal__overlay" data-close-modal></div>
+    <div class="modal__content">
+      <button class="modal__close" type="button" data-close-modal aria-label="Закрыть">&times;</button>
+      <h2 id="connectionTitle">Заявка на подключение</h2>
+      <p class="modal__text">Оставьте контактные данные для обратной связи.</p>
+      <form class="form" id="orderForm" novalidate>
+        <input type="hidden" id="orderPlan" name="plan" value="Обратный звонок">
+        <label class="field">
+          <span>Имя</span>
+          <input type="text" name="name" placeholder="Введите имя" required>
+          <small class="field__error"></small>
+        </label>
+        <label class="field">
+          <span>Телефон</span>
+          <input type="tel" name="phone" placeholder="+994 XX XXX XX XX" required>
+          <small class="field__error"></small>
+        </label>
+        <label class="field">
+          <span>Адрес подключения</span>
+          <input type="text" name="address" placeholder="Город, улица, дом" required>
+          <small class="field__error"></small>
+        </label>
+        <button class="btn btn--primary btn--full" type="submit">Отправить заявку</button>
+      </form>
+    </div>
+  </div>
+
+  <button class="back-to-top" type="button" data-back-top aria-label="Наверх">↑</button>
+  <div class="toast-container" data-toast-container aria-live="polite" aria-atomic="true"></div>
+
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div>
+        <a class="brand brand--footer" href="../index.html">
+          <img src="../images/favicon.svg" alt="" class="brand__logo">
+          <span class="brand__text">KabelNet</span>
+        </a>
+        <p>Связь с поддержкой, контактная информация и карта зоны обслуживания.</p>
+      </div>
+      <div>
+        <h3>Навигация</h3>
+        <a href="../index.html">Главная</a>
+        <a href="services.html">Услуги</a>
+        <a href="dashboard.html">Личный кабинет</a>
+      </div>
+      <div>
+        <h3>Контакты</h3>
+        <p>Баку, ул. Цифровая, 24</p>
+        <p>+994 12 555 44 33</p>
+        <p>support@kabelnet.local</p>
+      </div>
+    </div>
+    <div class="footer__bottom">© 2026 KabelNet. Курсовая работа по веб-программированию.</div>
+  </footer>
+
+  <script src="../js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="Телевидение">
+  <rect x="6" y="12" width="36" height="25" rx="5" fill="#e9f5f3" stroke="#2f7d75" stroke-width="3"/>
+  <path d="M18 42h12M24 37v5" stroke="#2f7d75" stroke-width="3" stroke-linecap="round"/>
+  <path d="M17 8 24 14l7-6" fill="none" stroke="#d59b4a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="34" cy="24" r="3" fill="#d59b4a"/>
+  <path d="M14 29h12" stroke="#2f7d75" stroke-width="3" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Онлайн информационная система для кабельного и телевизионного обслуживания">
+  <title>KabelNet — кабельное ТВ и интернет</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="home">
+  <!-- Preloader -->
+  <div class="preloader" data-preloader>
+    <div class="preloader__ring"></div>
+    <p>Загрузка сервиса</p>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header" data-header>
+    <div class="container header__inner">
+      <a class="brand" href="index.html" aria-label="KabelNet на главную">
+        <img src="images/favicon.svg" alt="" class="brand__logo">
+        <span class="brand__text">KabelNet</span>
+      </a>
+
+      <nav class="site-nav" id="mainNav" aria-label="Основная навигация">
+        <a href="index.html" class="site-nav__link is-active" aria-current="page">Главная</a>
+        <a href="pages/services.html" class="site-nav__link">Услуги</a>
+        <a href="pages/dashboard.html" class="site-nav__link">Личный кабинет</a>
+        <a href="pages/contacts.html" class="site-nav__link">Контакты</a>
+      </nav>
+
+      <div class="header__actions">
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Переключить тему">
+          <span class="theme-toggle__icon" aria-hidden="true"></span>
+          <span class="theme-toggle__text">Тема</span>
+        </button>
+        <button class="burger" type="button" data-burger aria-label="Открыть меню" aria-controls="mainNav" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero__content">
+        <p class="eyebrow">Кабельное ТВ, интернет и заявки в одном сервисе</p>
+        <h1>Онлайн-система кабельного и телевизионного обслуживания</h1>
+        <p class="hero__lead">KabelNet помогает подключать услуги, выбирать тарифы, отслеживать заявки и быстро обращаться в поддержку без звонков и очередей.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="pages/services.html">Выбрать тариф</a>
+          <button class="btn btn--secondary" type="button" data-open-modal="connectionModal" data-plan="Консультация специалиста">Оставить заявку</button>
+        </div>
+        <div class="hero__facts" aria-label="Ключевые показатели сервиса">
+          <div>
+            <strong>24/7</strong>
+            <span>прием заявок</span>
+          </div>
+          <div>
+            <strong>180+</strong>
+            <span>ТВ-каналов</span>
+          </div>
+          <div>
+            <strong>500 Мбит/с</strong>
+            <span>скорость доступа</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Company info -->
+    <section class="section">
+      <div class="container split">
+        <div class="section-header section-header--left">
+          <p class="eyebrow">О компании</p>
+          <h2>Надежная цифровая инфраструктура для дома и офиса</h2>
+          <p>KabelNet предоставляет кабельное телевидение, домашний интернет и сервисное сопровождение абонентов. Система создана как учебный проект, но отражает реальные процессы провайдера: выбор тарифа, подача заявки, хранение обращений и связь с поддержкой.</p>
+        </div>
+        <div class="info-panel">
+          <img src="images/icon-shield.svg" alt="" class="info-panel__icon">
+          <h3>Прозрачное обслуживание</h3>
+          <p>Пользователь видит тарифы, условия подключения и статусы заявок. Все действия выполняются на стороне интерфейса с сохранением данных в LocalStorage.</p>
+          <ul class="check-list">
+            <li>единая навигация между страницами;</li>
+            <li>адаптивная верстка для телефона и ПК;</li>
+            <li>имитация личного кабинета без серверной части.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Advantages -->
+    <section class="section section--muted">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">Преимущества</p>
+          <h2>Сервис, который удобно использовать каждый день</h2>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <img src="images/icon-speed.svg" alt="" class="feature-card__icon">
+            <h3>Быстрое подключение</h3>
+            <p>Заявка создается за несколько секунд, а пользователь сразу получает уведомление о принятии.</p>
+          </article>
+          <article class="feature-card">
+            <img src="images/icon-tv.svg" alt="" class="feature-card__icon">
+            <h3>Гибкие ТВ-пакеты</h3>
+            <p>Тарифы включают базовые, семейные и расширенные наборы каналов.</p>
+          </article>
+          <article class="feature-card">
+            <img src="images/icon-internet.svg" alt="" class="feature-card__icon">
+            <h3>Интернет для разных задач</h3>
+            <p>Есть варианты для учебы, удаленной работы, игр и потокового видео.</p>
+          </article>
+          <article class="feature-card">
+            <img src="images/icon-support.svg" alt="" class="feature-card__icon">
+            <h3>Поддержка без ожидания</h3>
+            <p>Форма обратной связи помогает быстро передать вопрос специалистам.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Popular plans -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">Популярные тарифы</p>
+          <h2>Подберите пакет под привычный сценарий</h2>
+        </div>
+        <div class="tariff-grid tariff-grid--home">
+          <article class="tariff-card">
+            <div class="tariff-card__top">
+              <span class="badge">ТВ</span>
+              <h3>Домашний ТВ</h3>
+            </div>
+            <p class="tariff-card__price">19 AZN <span>/ месяц</span></p>
+            <ul class="tariff-card__list">
+              <li>95 цифровых каналов</li>
+              <li>HD-каналы в базовом пакете</li>
+              <li>Поддержка приставки</li>
+            </ul>
+            <button class="btn btn--outline" type="button" data-open-modal="connectionModal" data-plan="Домашний ТВ">Подключить</button>
+          </article>
+          <article class="tariff-card tariff-card--accent">
+            <div class="tariff-card__top">
+              <span class="badge badge--accent">Хит</span>
+              <h3>Интернет + ТВ</h3>
+            </div>
+            <p class="tariff-card__price">39 AZN <span>/ месяц</span></p>
+            <ul class="tariff-card__list">
+              <li>250 Мбит/с</li>
+              <li>140 ТВ-каналов</li>
+              <li>Роутер на время договора</li>
+            </ul>
+            <button class="btn btn--primary" type="button" data-open-modal="connectionModal" data-plan="Интернет + ТВ">Подключить</button>
+          </article>
+          <article class="tariff-card">
+            <div class="tariff-card__top">
+              <span class="badge">Интернет</span>
+              <h3>Fast 500</h3>
+            </div>
+            <p class="tariff-card__price">45 AZN <span>/ месяц</span></p>
+            <ul class="tariff-card__list">
+              <li>до 500 Мбит/с</li>
+              <li>приоритетная линия</li>
+              <li>подходит для 4K и игр</li>
+            </ul>
+            <button class="btn btn--outline" type="button" data-open-modal="connectionModal" data-plan="Fast 500">Подключить</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Statistics -->
+    <section class="stats-band" aria-label="Статистика компании">
+      <div class="container stats-band__grid">
+        <div>
+          <strong>12 800+</strong>
+          <span>активных абонентов</span>
+        </div>
+        <div>
+          <strong>98%</strong>
+          <span>заявок обработано вовремя</span>
+        </div>
+        <div>
+          <strong>36</strong>
+          <span>районов в зоне покрытия</span>
+        </div>
+        <div>
+          <strong>4.8/5</strong>
+          <span>оценка поддержки</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+      <div class="container narrow">
+        <div class="section-header">
+          <p class="eyebrow">FAQ</p>
+          <h2>Частые вопросы</h2>
+        </div>
+        <div class="faq" data-accordion>
+          <div class="faq__item">
+            <button class="faq__question" type="button">Как быстро подключают услугу?</button>
+            <div class="faq__answer">
+              <p>После подачи заявки оператор связывается с абонентом и согласует удобное время визита мастера. В учебной версии сайта заявка сохраняется локально в браузере.</p>
+            </div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__question" type="button">Можно ли изменить тариф?</button>
+            <div class="faq__answer">
+              <p>Да, в реальной системе тариф меняется через личный кабинет или поддержку. В проекте можно создать новую заявку на изменение услуги.</p>
+            </div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__question" type="button">Нужна ли установка дополнительного оборудования?</button>
+            <div class="faq__answer">
+              <p>Для кабельного ТВ может потребоваться приставка, а для интернета — роутер. Конкретные условия зависят от выбранного тарифа.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Order modal -->
+  <div class="modal" id="connectionModal" aria-hidden="true" role="dialog" aria-labelledby="connectionTitle">
+    <div class="modal__overlay" data-close-modal></div>
+    <div class="modal__content">
+      <button class="modal__close" type="button" data-close-modal aria-label="Закрыть">&times;</button>
+      <h2 id="connectionTitle">Заявка на подключение</h2>
+      <p class="modal__text">Заполните форму, и заявка появится в личном кабинете.</p>
+      <form class="form" id="orderForm" novalidate>
+        <input type="hidden" id="orderPlan" name="plan" value="Консультация специалиста">
+        <label class="field">
+          <span>Имя</span>
+          <input type="text" name="name" placeholder="Введите имя" required>
+          <small class="field__error"></small>
+        </label>
+        <label class="field">
+          <span>Телефон</span>
+          <input type="tel" name="phone" placeholder="+994 XX XXX XX XX" required>
+          <small class="field__error"></small>
+        </label>
+        <label class="field">
+          <span>Адрес подключения</span>
+          <input type="text" name="address" placeholder="Город, улица, дом" required>
+          <small class="field__error"></small>
+        </label>
+        <button class="btn btn--primary btn--full" type="submit">Отправить заявку</button>
+      </form>
+    </div>
+  </div>
+
+  <button class="back-to-top" type="button" data-back-top aria-label="Наверх">↑</button>
+  <div class="toast-container" data-toast-container aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div>
+        <a class="brand brand--footer" href="index.html">
+          <img src="images/favicon.svg" alt="" class="brand__logo">
+          <span class="brand__text">KabelNet</span>
+        </a>
+        <p>Учебный проект онлайн информационной системы для кабельного и телевизионного обслуживания.</p>
+      </div>
+      <div>
+        <h3>Навигация</h3>
+        <a href="pages/services.html">Услуги</a>
+        <a href="pages/dashboard.html">Личный кабинет</a>
+        <a href="pages/contacts.html">Контакты</a>
+      </div>
+      <div>
+        <h3>Контакты</h3>
+        <p>Баку, ул. Цифровая, 24</p>
+        <p>+994 12 555 44 33</p>
+        <p>support@kabelnet.local</p>
+      </div>
+    </div>
+    <div class="footer__bottom">© 2026 KabelNet. Курсовая работа по веб-программированию.</div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

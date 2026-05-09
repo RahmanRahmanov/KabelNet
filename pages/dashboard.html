@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Личный кабинет абонента KabelNet">
+  <title>Личный кабинет — KabelNet</title>
+  <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body data-page="dashboard">
+  <div class="preloader" data-preloader>
+    <div class="preloader__ring"></div>
+    <p>Загрузка кабинета</p>
+  </div>
+
+  <header class="site-header" data-header>
+    <div class="container header__inner">
+      <a class="brand" href="../index.html" aria-label="KabelNet на главную">
+        <img src="../images/favicon.svg" alt="" class="brand__logo">
+        <span class="brand__text">KabelNet</span>
+      </a>
+      <nav class="site-nav" id="mainNav" aria-label="Основная навигация">
+        <a href="../index.html" class="site-nav__link">Главная</a>
+        <a href="services.html" class="site-nav__link">Услуги</a>
+        <a href="dashboard.html" class="site-nav__link is-active" aria-current="page">Личный кабинет</a>
+        <a href="contacts.html" class="site-nav__link">Контакты</a>
+      </nav>
+      <div class="header__actions">
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Переключить тему">
+          <span class="theme-toggle__icon" aria-hidden="true"></span>
+          <span class="theme-toggle__text">Тема</span>
+        </button>
+        <button class="burger" type="button" data-burger aria-label="Открыть меню" aria-controls="mainNav" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Личный кабинет</p>
+        <h1>Управление заявками на подключение и обслуживание</h1>
+        <p>Вход работает как frontend-имитация: данные пользователя и заявки сохраняются в LocalStorage браузера.</p>
+      </div>
+    </section>
+
+    <!-- Login panel -->
+    <section class="section" id="loginSection">
+      <div class="container auth-layout">
+        <div class="section-header section-header--left">
+          <p class="eyebrow">Авторизация</p>
+          <h2>Войдите в личный кабинет</h2>
+          <p>Для демонстрации достаточно указать имя и телефон. Серверная часть в курсовом проекте не используется.</p>
+        </div>
+        <form class="form auth-card" id="loginForm" novalidate>
+          <label class="field">
+            <span>Имя абонента</span>
+            <input type="text" name="name" placeholder="Например, Анар" required>
+            <small class="field__error"></small>
+          </label>
+          <label class="field">
+            <span>Телефон</span>
+            <input type="tel" name="phone" placeholder="+994 XX XXX XX XX" required>
+            <small class="field__error"></small>
+          </label>
+          <button class="btn btn--primary btn--full" type="submit">Войти</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- User dashboard -->
+    <section class="section dashboard is-hidden" id="dashboardSection">
+      <div class="container">
+        <div class="dashboard__top">
+          <div>
+            <p class="eyebrow">Панель пользователя</p>
+            <h2>Здравствуйте, <span id="userName">Абонент</span></h2>
+            <p class="muted">Здесь отображаются заявки, созданные на сайте.</p>
+          </div>
+          <button class="btn btn--ghost" type="button" id="logoutBtn">Выйти</button>
+        </div>
+
+        <div class="dashboard-grid">
+          <aside class="profile-card">
+            <img src="../images/icon-card.svg" alt="" class="profile-card__icon">
+            <h3>Сводка</h3>
+            <div class="profile-card__row">
+              <span>Телефон</span>
+              <strong id="userPhone">—</strong>
+            </div>
+            <div class="profile-card__row">
+              <span>Всего заявок</span>
+              <strong id="requestCount">0</strong>
+            </div>
+            <div class="profile-card__row">
+              <span>Активный статус</span>
+              <strong>Демо</strong>
+            </div>
+          </aside>
+
+          <div class="dashboard__content">
+            <form class="form request-form" id="requestForm" novalidate>
+              <h3>Новая заявка</h3>
+              <div class="form-grid">
+                <label class="field">
+                  <span>Тип услуги</span>
+                  <select name="service" required>
+                    <option value="">Выберите услугу</option>
+                    <option value="Подключение ТВ">Подключение ТВ</option>
+                    <option value="Подключение интернета">Подключение интернета</option>
+                    <option value="Комбо-пакет">Комбо-пакет</option>
+                    <option value="Техническая поддержка">Техническая поддержка</option>
+                  </select>
+                  <small class="field__error"></small>
+                </label>
+                <label class="field">
+                  <span>Адрес</span>
+                  <input type="text" name="address" placeholder="Адрес обслуживания" required>
+                  <small class="field__error"></small>
+                </label>
+              </div>
+              <label class="field">
+                <span>Комментарий</span>
+                <textarea name="comment" rows="3" placeholder="Кратко опишите задачу"></textarea>
+                <small class="field__error"></small>
+              </label>
+              <button class="btn btn--primary" type="submit">Добавить заявку</button>
+            </form>
+
+            <div class="requests-panel">
+              <div class="requests-panel__head">
+                <h3>Мои заявки</h3>
+                <span class="muted">данные хранятся локально</span>
+              </div>
+              <div class="request-list" id="requestList"></div>
+              <div class="empty-state is-hidden" id="emptyRequests">
+                <img src="../images/icon-request.svg" alt="">
+                <h3>Заявок пока нет</h3>
+                <p>Добавьте первую заявку через форму выше или выберите тариф на странице услуг.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal" id="connectionModal" aria-hidden="true" role="dialog" aria-labelledby="connectionTitle">
+    <div class="modal__overlay" data-close-modal></div>
+    <div class="modal__content">
+      <button class="modal__close" type="button" data-close-modal aria-label="Закрыть">&times;</button>
+      <h2 id="connectionTitle">Быстрая заявка</h2>
+      <p class="modal__text">Форма добавит обращение в список заявок кабинета.</p>
+      <form class="form" id="orderForm" novalidate>
+        <input type="hidden" id="orderPlan" name="plan" value="Быстрая заявка">
+        <label class="field">
+          <span>Имя</span>
+          <input type="text" name="name" placeholder="Введите имя" required>
+          <small class="field__error"></small>
+        </label>
+        <label class="field">
+          <span>Телефон</span>
+          <input type="tel" name="phone" placeholder="+994 XX XXX XX XX" required>
+          <small class="field__error"></small>
+        </label>
+        <label class="field">
+          <span>Адрес подключения</span>
+          <input type="text" name="address" placeholder="Город, улица, дом" required>
+          <small class="field__error"></small>
+        </label>
+        <button class="btn btn--primary btn--full" type="submit">Отправить заявку</button>
+      </form>
+    </div>
+  </div>
+
+  <button class="back-to-top" type="button" data-back-top aria-label="Наверх">↑</button>
+  <div class="toast-container" data-toast-container aria-live="polite" aria-atomic="true"></div>
+
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div>
+        <a class="brand brand--footer" href="../index.html">
+          <img src="../images/favicon.svg" alt="" class="brand__logo">
+          <span class="brand__text">KabelNet</span>
+        </a>
+        <p>Личный кабинет демонстрирует работу форм, LocalStorage и динамического списка заявок.</p>
+      </div>
+      <div>
+        <h3>Навигация</h3>
+        <a href="../index.html">Главная</a>
+        <a href="services.html">Услуги</a>
+        <a href="contacts.html">Контакты</a>
+      </div>
+      <div>
+        <h3>Абонентский отдел</h3>
+        <p>Пн–Сб: 09:00–19:00</p>
+        <p>+994 12 555 44 33</p>
+        <p>support@kabelnet.local</p>
+      </div>
+    </div>
+    <div class="footer__bottom">© 2026 KabelNet. Курсовая работа по веб-программированию.</div>
+  </footer>
+
+  <script src="../js/main.js" defer></script>
+</body>
+</html>

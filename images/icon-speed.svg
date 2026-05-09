@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="Скорость">
+  <path d="M8 33a17 17 0 1 1 32 0" fill="#f8f3e8" stroke="#2f7d75" stroke-width="3" stroke-linecap="round"/>
+  <path d="M24 30 35 17" stroke="#d59b4a" stroke-width="4" stroke-linecap="round"/>
+  <path d="M14 33h20" stroke="#2f7d75" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="24" cy="30" r="4" fill="#2f7d75"/>
+</svg>

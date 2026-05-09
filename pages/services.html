@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Тарифы кабельного ТВ и интернета KabelNet">
+  <title>Услуги и тарифы — KabelNet</title>
+  <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body data-page="services">
+  <div class="preloader" data-preloader>
+    <div class="preloader__ring"></div>
+    <p>Загрузка тарифов</p>
+  </div>
+
+  <header class="site-header" data-header>
+    <div class="container header__inner">
+      <a class="brand" href="../index.html" aria-label="KabelNet на главную">
+        <img src="../images/favicon.svg" alt="" class="brand__logo">
+        <span class="brand__text">KabelNet</span>
+      </a>
+      <nav class="site-nav" id="mainNav" aria-label="Основная навигация">
+        <a href="../index.html" class="site-nav__link">Главная</a>
+        <a href="services.html" class="site-nav__link is-active" aria-current="page">Услуги</a>
+        <a href="dashboard.html" class="site-nav__link">Личный кабинет</a>
+        <a href="contacts.html" class="site-nav__link">Контакты</a>
+      </nav>
+      <div class="header__actions">
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Переключить тему">
+          <span class="theme-toggle__icon" aria-hidden="true"></span>
+          <span class="theme-toggle__text">Тема</span>
+        </button>
+        <button class="burger" type="button" data-burger aria-label="Открыть меню" aria-controls="mainNav" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Услуги и тарифы</p>
+        <h1>Выберите пакет телевидения, интернета или комплексного подключения</h1>
+        <p>Фильтруйте предложения, сравнивайте условия и создавайте заявку на подключение прямо из карточки тарифа.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="toolbar" aria-label="Фильтрация тарифов">
+          <button class="filter-btn is-active" type="button" data-filter="all">Все тарифы</button>
+          <button class="filter-btn" type="button" data-filter="tv">Телевидение</button>
+          <button class="filter-btn" type="button" data-filter="internet">Интернет</button>
+          <button class="filter-btn" type="button" data-filter="combo">Комбо</button>
+        </div>
+
+        <div class="tariff-grid" data-tariff-list>
+          <article class="tariff-card" data-category="tv">
+            <div class="tariff-card__top">
+              <span class="badge">ТВ</span>
+              <h2>Базовый ТВ</h2>
+            </div>
+            <p class="tariff-card__price">15 AZN <span>/ месяц</span></p>
+            <ul class="tariff-card__list">
+              <li>70 каналов</li>
+              <li>10 HD-каналов</li>
+              <li>Электронная программа передач</li>
+            </ul>
+            <button class="btn btn--outline" type="button" data-open-modal="connectionModal" data-plan="Базовый ТВ">Подключить</button>
+          </article>
+
+          <article class="tariff-card" data-category="tv">
+            <div class="tariff-card__top">
+              <span class="badge">ТВ</span>
+              <h2>Семейный ТВ</h2>
+            </div>
+            <p class="tariff-card__price">25 AZN <span>/ месяц</span></p>
+            <ul class="tariff-card__list">
+              <li>135 каналов</li>
+              <li>кино, спорт и детские пакеты</li>
+              <li>поддержка двух ТВ-точек</li>
+            </ul>
+            <button class="btn btn--outline" type="button" data-open-modal="connectionModal" data-plan="Семейный ТВ">Подключить</button>
+          </article>
+
+          <article class="tariff-card" data-category="internet">
+            <div class="tariff-card__top">
+              <span class="badge">Интернет</span>
+              <h2>Start 100</h2>
+            </div>
+            <p class="tariff-card__price">22 AZN <span>/ месяц</span></p>
+            <ul class="tariff-card__list">
+              <li>до 100 Мбит/с</li>
+              <li>бесплатная диагностика линии</li>
+              <li>подходит для учебы и работы</li>
+            </ul>
+            <button class="btn btn--outline" type="button" data-open-modal="connectionModal" data-plan="Start 100">Подключить</button>
+          </article>
+
+          <article class="tariff-card tariff-card--accent" data-category="internet">
+            <div class="tariff-card__top">
+              <span class="badge badge--accent">Скорость</span>
+              <h2>Fast 500</h2>
+            </div>
+            <p class="tariff-card__price">45 AZN <span>/ месяц</span></p>
+            <ul class="tariff-card__list">
+              <li>до 500 Мбит/с</li>
+              <li>приоритетная поддержка</li>
+              <li>стабильный доступ для 4K</li>
+            </ul>
+            <button class="btn btn--primary" type="button" data-open-modal="connectionModal" data-plan="Fast 500">Подключить</button>
+          </article>
+
+          <article class="tariff-card" data-category="combo">
+            <div class="tariff-card__top">
+              <span class="badge">Комбо</span>
+              <h2>Дом Онлайн</h2>
+            </div>
+            <p class="tariff-card__price">35 AZN <span>/ месяц</span></p>
+            <ul class="tariff-card__list">
+              <li>200 Мбит/с</li>
+              <li>110 ТВ-каналов</li>
+              <li>единый счет за услуги</li>
+            </ul>
+            <button class="btn btn--outline" type="button" data-open-modal="connectionModal" data-plan="Дом Онлайн">Подключить</button>
+          </article>
+
+          <article class="tariff-card" data-category="combo">
+            <div class="tariff-card__top">
+              <span class="badge">Комбо</span>
+              <h2>Премиум Плюс</h2>
+            </div>
+            <p class="tariff-card__price">59 AZN <span>/ месяц</span></p>
+            <ul class="tariff-card__list">
+              <li>500 Мбит/с</li>
+              <li>180 ТВ-каналов</li>
+              <li>мастер без очереди</li>
+            </ul>
+            <button class="btn btn--outline" type="button" data-open-modal="connectionModal" data-plan="Премиум Плюс">Подключить</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--muted">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">Сравнение</p>
+          <h2>Таблица тарифов</h2>
+        </div>
+        <div class="table-wrap">
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th>Тариф</th>
+                <th>Тип</th>
+                <th>Скорость</th>
+                <th>Каналы</th>
+                <th>Цена</th>
+                <th>Лучше всего для</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Базовый ТВ</td>
+                <td>ТВ</td>
+                <td>—</td>
+                <td>70</td>
+                <td>15 AZN</td>
+                <td>стандартного просмотра</td>
+              </tr>
+              <tr>
+                <td>Семейный ТВ</td>
+                <td>ТВ</td>
+                <td>—</td>
+                <td>135</td>
+                <td>25 AZN</td>
+                <td>семьи и фильмов</td>
+              </tr>
+              <tr>
+                <td>Start 100</td>
+                <td>Интернет</td>
+                <td>100 Мбит/с</td>
+                <td>—</td>
+                <td>22 AZN</td>
+                <td>учебы и работы</td>
+              </tr>
+              <tr>
+                <td>Fast 500</td>
+                <td>Интернет</td>
+                <td>500 Мбит/с</td>
+                <td>—</td>
+                <td>45 AZN</td>
+                <td>4K, игр и большой семьи</td>
+              </tr>
+              <tr>
+                <td>Премиум Плюс</td>
+                <td>Комбо</td>
+                <td>500 Мбит/с</td>
+                <td>180</td>
+                <td>59 AZN</td>
+                <td>максимального набора услуг</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal" id="connectionModal" aria-hidden="true" role="dialog" aria-labelledby="connectionTitle">
+    <div class="modal__overlay" data-close-modal></div>
+    <div class="modal__content">
+      <button class="modal__close" type="button" data-close-modal aria-label="Закрыть">&times;</button>
+      <h2 id="connectionTitle">Заявка на подключение</h2>
+      <p class="modal__text">Тариф будет сохранен вместе с заявкой в личном кабинете.</p>
+      <form class="form" id="orderForm" novalidate>
+        <input type="hidden" id="orderPlan" name="plan" value="Выбранный тариф">
+        <label class="field">
+          <span>Имя</span>
+          <input type="text" name="name" placeholder="Введите имя" required>
+          <small class="field__error"></small>
+        </label>
+        <label class="field">
+          <span>Телефон</span>
+          <input type="tel" name="phone" placeholder="+994 XX XXX XX XX" required>
+          <small class="field__error"></small>
+        </label>
+        <label class="field">
+          <span>Адрес подключения</span>
+          <input type="text" name="address" placeholder="Город, улица, дом" required>
+          <small class="field__error"></small>
+        </label>
+        <button class="btn btn--primary btn--full" type="submit">Отправить заявку</button>
+      </form>
+    </div>
+  </div>
+
+  <button class="back-to-top" type="button" data-back-top aria-label="Наверх">↑</button>
+  <div class="toast-container" data-toast-container aria-live="polite" aria-atomic="true"></div>
+
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div>
+        <a class="brand brand--footer" href="../index.html">
+          <img src="../images/favicon.svg" alt="" class="brand__logo">
+          <span class="brand__text">KabelNet</span>
+        </a>
+        <p>Готовые тарифы для кабельного ТВ, интернета и комплексного подключения.</p>
+      </div>
+      <div>
+        <h3>Навигация</h3>
+        <a href="../index.html">Главная</a>
+        <a href="dashboard.html">Личный кабинет</a>
+        <a href="contacts.html">Контакты</a>
+      </div>
+      <div>
+        <h3>Поддержка</h3>
+        <p>Ежедневно: 09:00–21:00</p>
+        <p>+994 12 555 44 33</p>
+        <p>support@kabelnet.local</p>
+      </div>
+    </div>
+    <div class="footer__bottom">© 2026 KabelNet. Курсовая работа по веб-программированию.</div>
+  </footer>
+
+  <script src="../js/main.js" defer></script>
+</body>
+</html>
